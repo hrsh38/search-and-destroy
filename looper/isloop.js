@@ -2,7 +2,18 @@
 
 //Complete this algo
 const isLoop = (linkedlist) => {
-
+    let obj = {};
+    let curr = linkedlist.head;
+    while (curr.next !== null){
+        if (obj[curr.value]){
+            return true;
+        }
+        else {
+            obj[curr.value] = true;
+        }
+        curr = curr.next;
+    }
+    return false;
 };
 
 
